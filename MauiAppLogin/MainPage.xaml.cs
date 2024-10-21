@@ -9,9 +9,9 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        protected override Window CreateWindow(IActivationState activationState)
         {
-            count++;
+            var window = base.CreateWindow(activationState);
 
             if (count == 1)
                 CounterBtn.Text = $"Clicked {count} time";
